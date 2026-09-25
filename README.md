@@ -10,7 +10,7 @@ A messaging web application built with **C# and ASP.NET Core MVC**, featuring us
 - Private conversations
 - Sending and receiving messages
 - User-specific conversations and messages
-- Database with **Entity Framework Core**
+- Database with **Entity Framework Core** and **SQL Server**
 
 ## Technologies
 
