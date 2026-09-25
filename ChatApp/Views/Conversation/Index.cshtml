@@ -1,0 +1,15 @@
+﻿@model IEnumerable<ChatApp.Models.Conversation>
+
+@{
+    ViewData["title"] = "Index";
+}
+
+<h1>Conversations</h1>
+
+<div>
+    @foreach(var item in Model)
+    {
+        <a asp-action="Details" asp-route-id="@item.Id">@item.Title</a>
+    }
+
+</div>

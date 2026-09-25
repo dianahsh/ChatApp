@@ -1,0 +1,47 @@
+@model IEnumerable<ChatApp.Models.Contact>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UserId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContactUserId)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(model => item.UserId)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.ContactUserId)
+            </td>
+            <td>
+                <form asp-controller="Conversation" asp-action="Create"
+                        method="post">
+
+                    <input type="hidden" name="contactId" value="@item.ContactUserId" />
+
+                    <button type="submit">Private</button>
+                </form>
+                
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a> |
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
