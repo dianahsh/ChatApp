@@ -1,6 +1,6 @@
 # ChatApp
 
-A messaging application built with **C# and ASP.NET Core MVC**, featuring user authentication, contacts, private conversations, and messaging.
+A messaging web application built with **C# and ASP.NET Core MVC**, featuring user authentication, contacts, private conversations, and messaging.
 
 ## Features
 
